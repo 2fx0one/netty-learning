@@ -11,6 +11,7 @@ import io.netty.channel.SimpleChannelInboundHandler;
  */
 public class TimeClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
 
+    @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, ByteBuf buf) throws Exception {
         byte[] request = new byte[buf.readableBytes()];
         buf.readBytes(request);
